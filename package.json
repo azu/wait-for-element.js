@@ -19,7 +19,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "require('es6-promise').polyfill();"
+    "test": "testem ci"
   },
   "keywords": [
     "MutationObserver",
