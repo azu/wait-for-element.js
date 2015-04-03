@@ -1,0 +1,14 @@
+{
+  "framework": "mocha",
+  "before_tests": "browserify test/*.js > test-bundle.js",
+  "src_files": [
+    "./test/*.js"
+  ],
+  "on_exit": "rm -f test-bundle.js",
+  "serve_files": [
+    "./test-bundle.js"
+  ],
+  "launch_in_dev": [
+    "Chrome"
+  ]
+}

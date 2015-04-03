@@ -1,0 +1,36 @@
+{
+  "name": "wait-for-element.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/wait-for-element.js.git"
+  },
+  "author": "azu",
+  "email": "azuciao@gmail.com",
+  "homepage": "https://github.com/azu/wait-for-element.js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/wait-for-element.js/issues"
+  },
+  "version": "1.0.0",
+  "description": "wait for element function.",
+  "main": "lib/index.js",
+  "files": ["lib"],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "require('es6-promise').polyfill();"
+  },
+  "keywords": [
+    "MutationObserver",
+    "element",
+    "observe"
+  ],
+  "devDependencies": {
+    "browserify": "^9.0.6",
+    "es6-promise": "^2.0.1",
+    "power-assert": "^0.10.2",
+    "promise-test-helper": "^0.2.1",
+    "testem": "^0.7.7"
+  }
+}
