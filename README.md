@@ -1,4 +1,4 @@
-# wait-for-element.js
+# wait-for-element.js [![Build Status](https://travis-ci.org/azu/wait-for-element.js.svg?branch=master)](https://travis-ci.org/azu/wait-for-element.js)
 
 This library provide a function which wait until an element is visible.
 
