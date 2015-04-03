@@ -6,6 +6,12 @@ This library provide a function which wait until an element is visible.
 
     npm install wait-for-element.js
 
+### Dependency
+
+- Promise API
+
+if you use it with non promise support browser, should load Promise polyfill like [ES6-Promise](https://github.com/jakearchibald/es6-promise "ES6-Promise").
+
 ## Usage
 
 - [ ] Write usage instructions
