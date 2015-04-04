@@ -14,7 +14,9 @@
   "version": "1.0.0",
   "description": "wait for element function.",
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "directories": {
     "test": "test"
   },
@@ -29,6 +31,7 @@
   "devDependencies": {
     "browserify": "^9.0.6",
     "es6-promise": "^2.0.1",
+    "espowerify": "^0.10.0",
     "power-assert": "^0.10.2",
     "promise-test-helper": "^0.2.1",
     "testem": "^0.7.7"

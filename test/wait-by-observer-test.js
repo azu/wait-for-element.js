@@ -2,13 +2,13 @@
 "use strict";
 require('es6-promise').polyfill();
 var assert = require("power-assert");
-var waitByTimer = require("../lib/wait-by-timer");
+var waitByObserver = require("../lib/wait-by-observer");
 var shouldFulfilled = require("promise-test-helper").shouldFulfilled;
 var shouldRejected = require("promise-test-helper").shouldRejected;
-describe("wait-by-timer.js", function () {
+describe("wait-by-observer.js", function () {
     context("when found the element", function () {
         it("should return promise which filled with the element", function () {
-            return shouldFulfilled(waitByTimer("#mocha")).then(function (element) {
+            return shouldFulfilled(waitByObserver("#mocha")).then(function (element) {
                 assert(element === document.querySelector("#mocha"));
             });
         });
@@ -21,14 +21,14 @@ describe("wait-by-timer.js", function () {
             setTimeout(function () {
                 fixtureElement.appendChild(appendedElement);
             }, 100);
-            return shouldFulfilled(waitByTimer("#js-element")).then(function (element) {
+            return shouldFulfilled(waitByObserver("#js-element")).then(function (element) {
                 assert(element.id === appendedElement.id);
             });
         });
     });
     context("when not found the element", function () {
         it("should return promise which rejected with Error", function () {
-            return shouldRejected(waitByTimer("#notFoundID", 100)).catch(function (error) {
+            return shouldRejected(waitByObserver("#notFoundID", 100)).catch(function (error) {
                 assert(error instanceof Error);
             });
         });

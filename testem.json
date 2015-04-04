@@ -1,6 +1,6 @@
 {
   "framework": "mocha",
-  "before_tests": "browserify test/*.js > test-bundle.js",
+  "before_tests": "browserify -d -t espowerify test/*.js > test-bundle.js",
   "src_files": [
     "./test/*.js"
   ],
