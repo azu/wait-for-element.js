@@ -1,6 +1,13 @@
 // LICENSE : MIT
 "use strict";
+// polyfilled
 require('es6-promise').polyfill();
+if (Element && !Element.prototype.matches) {
+    var proto = Element.prototype;
+    proto.matches = proto.matchesSelector ||
+    proto.mozMatchesSelector || proto.msMatchesSelector ||
+    proto.oMatchesSelector || proto.webkitMatchesSelector;
+}
 var assert = require("power-assert");
 var waitByObserver = require("../lib/wait-by-observer");
 var shouldFulfilled = require("promise-test-helper").shouldFulfilled;
