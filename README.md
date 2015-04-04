@@ -14,7 +14,21 @@ if you use it with non promise support browser, should load Promise polyfill lik
 
 ## Usage
 
-- [ ] Write usage instructions
+For details, please see [Example](example/).
+
+```js
+/**
+ * Wait until an element that is matched the selector is visible.
+ * @param {string} selector the css selector
+ * @param {number} timeout the timeout is millisecond. default:2000ms
+ * @returns {Promise}
+ */
+var waitForElement = require("wait-for-element");
+waitForElement("#js-element").then(function (element) {
+    alert("Found #js-element");
+}).catch(console.error.bind(console));
+```
+
 
 ## Tests
 
