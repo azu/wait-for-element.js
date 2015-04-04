@@ -1,0 +1,22 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example.js",
+  "scripts": {
+    "install": "npm run build",
+    "build": "browserify example.js -o build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "example"
+  ],
+  "author": "azu",
+  "license": "MIT",
+  "dependencies": {
+    "wait-for-element": "file:.."
+  },
+  "devDependencies": {
+    "browserify": "^9.0.7"
+  }
+}
