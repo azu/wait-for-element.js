@@ -5,6 +5,9 @@ var assert = require("power-assert");
 var waitByObserver = require("../lib/wait-by-observer");
 var shouldFulfilled = require("promise-test-helper").shouldFulfilled;
 var shouldRejected = require("promise-test-helper").shouldRejected;
+if (Element && !Element.prototype.matches) {
+    return;
+}
 describe("wait-by-observer.js", function () {
     context("when found the element", function () {
         it("should return promise which filled with the element", function () {
