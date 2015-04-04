@@ -5,7 +5,7 @@ var assert = require("power-assert");
 var waitByObserver = require("../lib/wait-by-observer");
 var shouldFulfilled = require("promise-test-helper").shouldFulfilled;
 var shouldRejected = require("promise-test-helper").shouldRejected;
-if (Element && !Element.prototype.matches) {
+if ((Element && !Element.prototype.matches) || typeof MutationObserver === "undefined") {
     return;
 }
 describe("wait-by-observer.js", function () {
