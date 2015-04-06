@@ -12,9 +12,25 @@ This library provide a function which wait until an element is visible.
 
 if you use it with non promise support browser, should load Promise polyfill like [ES6-Promise](https://github.com/jakearchibald/es6-promise "ES6-Promise").
 
-- MutationObserver or SetTimeout polling 
+- [Element.matches()](https://developer.mozilla.org/en/docs/Web/API/Element/matches "Element.matches()")
+
+if you use it with old browser.
+
+```js
+if (Element && !Element.prototype.matches) {
+    var proto = Element.prototype;
+    proto.matches = proto.matchesSelector ||
+    proto.mozMatchesSelector || proto.msMatchesSelector ||
+    proto.oMatchesSelector || proto.webkitMatchesSelector;
+}
+```
+
+or use polyfill.
+
+- [MutationObserver](https://developer.mozilla.org/en/docs/Web/API/MutationObserver "MutationObserver") or SetTimeout polling 
 
 wait-for-element do feature detection and use either one of the two.
+
 
 ## Usage
 
