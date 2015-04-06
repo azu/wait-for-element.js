@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/azu/wait-for-element.js/issues"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "wait for element function.",
   "main": "lib/index.js",
   "files": [
