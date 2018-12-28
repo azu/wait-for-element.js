@@ -4,7 +4,7 @@ This library provide a function which wait until an element is visible.
 
 ## Installation
 
-    npm install wait-for-element.js
+    npm install wait-for-element
 
 ### Dependency
 
